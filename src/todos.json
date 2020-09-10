@@ -1,0 +1,16 @@
+{
+    "todos": [
+        {
+            "title":"Uber",
+            "valor":"-97.63"
+        },
+        {
+            "title":"Transferencia",
+            "valor":"+$103.47"
+        },
+        {
+            "title":"Netflix",
+            "valor":"-105.20"
+        }
+    ]
+}

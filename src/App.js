@@ -1,26 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {todos} from './todos.json';
+import Navigation from './componentes/Navigation';
+import Balance from './componentes/Balance';
 
-function App() {
+class App extends Component{
+  constructor(){
+    super();
+    this.state ={
+      todos
+      
+    }
+  }
+
+  render(){
+    const todos = this.state.todos.map((todo,i) => {
+      return(
+        <div className="fab fa-uber txt-li">
+        {todo.title}
+        {todo.valor}
+        </div>
+      )
+    }
+    )
+  
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Navigation />
+      <Balance />
+      {todos}
+    </div>    
   );
 }
+}
+
 
 export default App;
